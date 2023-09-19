@@ -7,9 +7,20 @@ using namespace std;
 
 // A COMPLETER
 // Implémenter les méthodes nécessaires pour la forme canonique de COPLIEN
+Groupe::Groupe(const Groupe& g) {
 
+    for (auto i : g.m_effectif) {
+        Personne * temp = new Personne(i->getNom());
+        Groupe::m_effectif.push_back(temp) ;
+    }
+}
 Groupe::Groupe(const std::string &intitule)
         : m_intitule(intitule) {
+}
+Groupe::~Groupe() {
+    for(auto i : Groupe::m_effectif) {
+        delete i;
+    }
 }
 
 ///////////////////////////////////////////////////
@@ -36,3 +47,10 @@ void Groupe::affiche() const {
         cout << personne->getNom() << " ";
     cout << "}" << endl;
 }
+Groupe& Groupe::operator=(const Groupe& g){
+    for (auto i : g.m_effectif) {
+        Personne * temp = new Personne(i->getNom());
+        Groupe::m_effectif.push_back(temp) ;
+    }
+}
+

@@ -7,12 +7,15 @@
 
 class Groupe {
 public:
+    Groupe(const Groupe&);
+    ~Groupe();
     Groupe(const std::string & intitule = "Un Groupe");
     void setIntitule(const std::string & intitule);
     void addPersonne(const std::string & nom);
     void setNomPersonne(unsigned int i,
             const std::string nom);
     void affiche() const;
+    Groupe& operator=(const Groupe& g);
 
     // A COMPLETER POUR METTRE SOUS FORME CANONIQUE DE COPLIEN
 
