@@ -13,7 +13,7 @@ public:
     void setVal(int valeur);
     void saisir(std::istream & entree = std::cin);
     void afficher(std::ostream & sortie = std::cout) const;
-
+    operator int() const;
     // A Compléter : rajouter operator int
 
 private:
@@ -28,6 +28,8 @@ private:
 };
 
 // A compléter : rajouter operator << et operator >>
+std::ostream & operator << (std::ostream & sortie, const EntierContraint & ec);
+std::istream & operator >> (std::istream & entree, EntierContraint & ec);
 // ATTENTION : ce sont des fonctions (pas des méthodes)
 
 #endif /* ENTIERCONTRAINT_H */
