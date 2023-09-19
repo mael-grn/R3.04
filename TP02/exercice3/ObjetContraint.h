@@ -8,12 +8,12 @@ class ObjetContraint {
     // A COMPLETER : Spécifiez ici le template de classe ObjetContraint<T>
 
 public:
-    ObjetContraint(T val, T min, T max);
-    const T& getMin() const;
-    const T& getMax() const;
-    const T& getMval() const;
-    void setVal(const T& val);
-    operator T() const;
+    ObjetContraint(T val, T min, T max){val=val; min=min; max=max;}
+    const T& getMin() const{return min;}
+    const T& getMax() const{return max;}
+    const T& getMval() const{return val;}
+    void setVal(const T& valeur){this->val = valeur;}
+    operator T() const{return val;}
 
 private:
     T val;
