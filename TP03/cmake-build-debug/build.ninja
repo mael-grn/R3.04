@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/cmake-build-debug/
+cmake_ninja_workdir = /users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target exercice1
 
@@ -49,17 +49,17 @@ cmake_ninja_workdir = C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/cmake-b
 
 build cmake_object_order_depends_target_exercice1: phony || CMakeFiles/exercice1.dir
 
-build CMakeFiles/exercice1.dir/exercice1/Visage.cpp.obj: CXX_COMPILER__exercice1_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice1/Visage.cpp || cmake_object_order_depends_target_exercice1
-  DEP_FILE = CMakeFiles\exercice1.dir\exercice1\Visage.cpp.obj.d
+build CMakeFiles/exercice1.dir/exercice1/Visage.cpp.o: CXX_COMPILER__exercice1_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice1/Visage.cpp || cmake_object_order_depends_target_exercice1
+  DEP_FILE = CMakeFiles/exercice1.dir/exercice1/Visage.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice1.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice1.dir\exercice1
+  OBJECT_DIR = CMakeFiles/exercice1.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice1.dir/exercice1
 
-build CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.obj: CXX_COMPILER__exercice1_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice1/Exercice1.cpp || cmake_object_order_depends_target_exercice1
-  DEP_FILE = CMakeFiles\exercice1.dir\exercice1\Exercice1.cpp.obj.d
+build CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.o: CXX_COMPILER__exercice1_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice1/Exercice1.cpp || cmake_object_order_depends_target_exercice1
+  DEP_FILE = CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice1.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice1.dir\exercice1
+  OBJECT_DIR = CMakeFiles/exercice1.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice1.dir/exercice1
 
 
 # =============================================================================
@@ -67,17 +67,15 @@ build CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.obj: CXX_COMPILER__exerci
 
 
 #############################################
-# Link the executable exercice1.exe
+# Link the executable exercice1
 
-build exercice1.exe: CXX_EXECUTABLE_LINKER__exercice1_Debug CMakeFiles/exercice1.dir/exercice1/Visage.cpp.obj CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.obj
+build exercice1: CXX_EXECUTABLE_LINKER__exercice1_Debug CMakeFiles/exercice1.dir/exercice1/Visage.cpp.o CMakeFiles/exercice1.dir/exercice1/Exercice1.cpp.o
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\exercice1.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = exercice1.exe
-  TARGET_IMPLIB = libexercice1.dll.a
-  TARGET_PDB = exercice1.exe.dbg
+  OBJECT_DIR = CMakeFiles/exercice1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = exercice1
+  TARGET_PDB = exercice1.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target exercice2
@@ -88,41 +86,41 @@ build exercice1.exe: CXX_EXECUTABLE_LINKER__exercice1_Debug CMakeFiles/exercice1
 
 build cmake_object_order_depends_target_exercice2: phony || CMakeFiles/exercice2.dir
 
-build CMakeFiles/exercice2.dir/exercice2/Tarif.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/Tarif.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\Tarif.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/Tarif.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/Tarif.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/Tarif.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
-build CMakeFiles/exercice2.dir/exercice2/Trajet.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/Trajet.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\Trajet.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/Trajet.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/Trajet.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/Trajet.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
-build CMakeFiles/exercice2.dir/exercice2/Promotion.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/Promotion.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\Promotion.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/Promotion.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/Promotion.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/Promotion.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
-build CMakeFiles/exercice2.dir/exercice2/Billet.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/Billet.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\Billet.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/Billet.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/Billet.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/Billet.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
-build CMakeFiles/exercice2.dir/exercice2/BilletReduit.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/BilletReduit.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\BilletReduit.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/BilletReduit.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/BilletReduit.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/BilletReduit.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
-build CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.obj: CXX_COMPILER__exercice2_Debug C$:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/exercice2/exercice2.cpp || cmake_object_order_depends_target_exercice2
-  DEP_FILE = CMakeFiles\exercice2.dir\exercice2\exercice2.cpp.obj.d
+build CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.o: CXX_COMPILER__exercice2_Debug /users/info/etu-2a/garnmael/R3.04/TPs/TP03/exercice2/exercice2.cpp || cmake_object_order_depends_target_exercice2
+  DEP_FILE = CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.o.d
   FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  OBJECT_FILE_DIR = CMakeFiles\exercice2.dir\exercice2
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  OBJECT_FILE_DIR = CMakeFiles/exercice2.dir/exercice2
 
 
 # =============================================================================
@@ -130,25 +128,24 @@ build CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.obj: CXX_COMPILER__exerci
 
 
 #############################################
-# Link the executable exercice2.exe
+# Link the executable exercice2
 
-build exercice2.exe: CXX_EXECUTABLE_LINKER__exercice2_Debug CMakeFiles/exercice2.dir/exercice2/Tarif.cpp.obj CMakeFiles/exercice2.dir/exercice2/Trajet.cpp.obj CMakeFiles/exercice2.dir/exercice2/Promotion.cpp.obj CMakeFiles/exercice2.dir/exercice2/Billet.cpp.obj CMakeFiles/exercice2.dir/exercice2/BilletReduit.cpp.obj CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.obj
+build exercice2: CXX_EXECUTABLE_LINKER__exercice2_Debug CMakeFiles/exercice2.dir/exercice2/Tarif.cpp.o CMakeFiles/exercice2.dir/exercice2/Trajet.cpp.o CMakeFiles/exercice2.dir/exercice2/Promotion.cpp.o CMakeFiles/exercice2.dir/exercice2/Billet.cpp.o CMakeFiles/exercice2.dir/exercice2/BilletReduit.cpp.o CMakeFiles/exercice2.dir/exercice2/exercice2.cpp.o
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\exercice2.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = exercice2.exe
-  TARGET_IMPLIB = libexercice2.dll.a
-  TARGET_PDB = exercice2.exe.dbg
+  OBJECT_DIR = CMakeFiles/exercice2.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = exercice2
+  TARGET_PDB = exercice2.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\martinp\Desktop\Ens-M3105\2022-2023\TP03\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
-  DESC = No interactive CMake dialog available...
+  COMMAND = cd /users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug && /usr/local/clion-2022.2.1/bin/cmake/linux/bin/ccmake -S/users/info/etu-2a/garnmael/R3.04/TPs/TP03 -B/users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug
+  DESC = Running CMake cache editor...
+  pool = console
   restat = 1
 
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -158,7 +155,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\martinp\Desktop\Ens-M3105\2022-2023\TP03\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SC:\Users\martinp\Desktop\Ens-M3105\2022-2023\TP03 -BC:\Users\martinp\Desktop\Ens-M3105\2022-2023\TP03\cmake-build-debug"
+  COMMAND = cd /users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug && /usr/local/clion-2022.2.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S/users/info/etu-2a/garnmael/R3.04/TPs/TP03 -B/users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -168,19 +165,15 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build exercice1: phony exercice1.exe
-
-build exercice2: phony exercice2.exe
-
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/martinp/Desktop/Ens-M3105/2022-2023/TP03/cmake-build-debug
+# Folder: /users/info/etu-2a/garnmael/R3.04/TPs/TP03/cmake-build-debug
 
-build all: phony exercice1.exe exercice2.exe
+build all: phony exercice1 exercice2
 
 # =============================================================================
 # Built-in targets
@@ -189,14 +182,14 @@ build all: phony exercice1.exe exercice2.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.2.1/bin/cmake/win/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeRCCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /usr/local/clion-2022.2.1/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

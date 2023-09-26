@@ -13,6 +13,7 @@ public:
     void addBouton(int diametre);
     void setChapeau(const Chapeau &unChapeau);
     void addBijou(const Bijou &unBijou);
+
     const Visage &operator=(const Visage &unVisage);
     Visage(const Visage &unVisage);
     ~Visage();
@@ -22,9 +23,12 @@ public:
     friend std::ostream &operator<<(std::ostream &sortie, const Visage &visage);
 
 private:
-
-    // A COMPLETER : CODEZ CORRECTEMENT LES COMPOSITIONS ET AGREGATIONS
-
+    std::vector<Bijou const *> bijou;
+    std::vector<Bouton *> boutons;
+    Nez nez;
+    Ethnie const &ethnie;
+    Moustache * moustache;
+    Chapeau const * chapeau;
 };
 
 #endif /* VISAGE_H */
