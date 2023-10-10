@@ -12,6 +12,7 @@ public:
     unsigned int getTaille() override;
     void ajouter(Element* element) override;
     const std::string & getDateModification() override;
+    void afficher();
 
 };
 

@@ -9,6 +9,7 @@ class Repertoire : public Element {
 
 private:
     std::vector<Element *> contenu;
+    static const std::string defDate;
 public:
     Repertoire(const std::string & nom, const Usager &proprietaire);
     ~Repertoire();

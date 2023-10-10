@@ -13,11 +13,10 @@ public:
     ~Element();
     const std::string & getNom();
     void setNom(const std::string & nom);
-    const Usager* & getProprietaire();
+    const Usager & getProprietaire();
     void setProprietaire(const Usager* & proprietaire);
     virtual unsigned int getTaille()=0;
     virtual const std::string & getDateModification()=0;
-    void setDateModification(const std::string & date);
     virtual void afficher();
     virtual void ajouter(Element* element)=0;
 };

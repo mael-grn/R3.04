@@ -14,3 +14,9 @@ unsigned int Fichier::getTaille() {return this->taille;}
 
 void Fichier::ajouter(Element *element) {throw "Opération Interdite sur un Fichier";}
 const std::string &Fichier::getDateModification() {return this->date;}
+
+void Fichier::afficher() {
+    std::cout <<" * " << this->getNom() <<" : " << "Detenu par ";
+    this->getProprietaire().afficher();
+    std::cout << ", derniere modification le " << this->getDateModification() << ", taille de " << this->getTaille() << "ko.\n";
+}

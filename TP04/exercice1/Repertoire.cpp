@@ -7,6 +7,8 @@
 
 using namespace std;
 
+const string Repertoire::defDate = "1970-01-01";
+
 Repertoire::Repertoire(const std::string &nom, const Usager &proprietaire) : Element(nom, proprietaire){}
 Repertoire::~Repertoire() {
     for(auto i : contenu) {
@@ -15,22 +17,22 @@ Repertoire::~Repertoire() {
 }
 
 const std::string &Repertoire::getDateModification() {
-    string latest;
+    const string * latest;
 
     //attribution d'un valeur par defaut : si la liste d'element n'est pas vide, donne la date du premier element
     if (contenu.empty()){
-        latest = "1970-01-01";
+        latest = &Repertoire::defDate;
     } else {
-        latest = contenu[0]->getDateModification();
+        latest = &contenu[0]->getDateModification();
     }
 
     //recherche de l'element le plus recent dans la liste
     for (auto i : contenu) {
-        if (i->getDateModification().compare(latest)>0){
-            latest = i->getDateModification();
+        if (i->getDateModification().compare(*latest)>0){
+            latest = &i->getDateModification();
         }
     }
-    return latest;
+    return *latest;
 }
 
 unsigned int Repertoire::getTaille() {
@@ -48,10 +50,16 @@ void Repertoire::ajouter(Element *element) {
 }
 
 void Repertoire::afficher() {
-    cout << this->getNom() << " : \n\t- proprietaire : " << this->getProprietaire() << "\n\t- taille : " << this->getTaille() << "Ko" << "\n\t- derniere modification : " << this->getDateModification()
+    cout << this->getNom() << " : \n\t- proprietaire : ";
+    this->getProprietaire().afficher();
+    cout << "\n\t- taille : " << this->getTaille() << "Ko" << "\n\t- derniere modification : " << this->getDateModification()
     << "\n\t- contient : ";
-    for (auto i : contenu){
-        cout << "\n\t\t* " << i->getNom() << " : " << i->getTaille() << "Ko";
+    if (contenu.empty()) {
+        cout << "\n\t\t* fichier vide";
     }
+    for (auto i : contenu){
+        cout << "\n\t\t* " << i->getNom();
+    }
+    cout<<"\n";
 }
 
