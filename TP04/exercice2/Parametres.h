@@ -5,9 +5,17 @@
 #include "Joueur.h"
 
 class Parametres {
-
-    // à compléter
-    
+private:
+    Theme theme;
+    Joueur * joueur;
+public:
+    Parametres(std::string intituleTheme);
+    ~Parametres();
+    Theme &getTheme();
+    void setTheme(Theme theme);
+    Joueur * getJoueur();
+    void setJoueur(Joueur joueur);
+    void afficher();
 };
 
 #endif /* PARAMETRES_H */
