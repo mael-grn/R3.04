@@ -9,7 +9,8 @@ private:
     Theme theme;
     Joueur * joueur;
 public:
-    Parametres(std::string intituleTheme);
+    Parametres(std::string intituleTheme="Par defaut");
+
     ~Parametres();
     Theme &getTheme();
     void setTheme(Theme theme);

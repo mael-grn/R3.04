@@ -32,5 +32,5 @@ Joueur *Parametres::getJoueur() {
 }
 
 void Parametres::afficher() {
-    cout << "joueur : " << this->getJoueur()->getPseudo() << "Theme : " << this->getTheme().getIntitule();
+    cout << "parametre { Theme : " <<this->getTheme().getIntitule() << ", Joueur : " << this->getJoueur()->getPseudo() << "}\n";
 }

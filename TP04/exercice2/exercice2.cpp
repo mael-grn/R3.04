@@ -2,13 +2,19 @@
 
 int main() {
     // Afficher les paramètres initiaux
-    // à compléter
+    Parametres * param1 = new Parametres;
+
+    param1->afficher();
+
     // Instancier un thème intitulé "Urbain" et l'associer aux paramètres
-    // à compléter
+    Theme * theme1 = new Theme("Urbain");
+    param1->setTheme(*theme1);
     // Instancier un joueur nommé "Yoloutre" et l'associer aux paramètres
-    // à compléter
+    Joueur * joueur1 = new Joueur("Yoloutre");
+    param1->setJoueur(*joueur1);
     // Afficher les nouveaux paramètres
-    // à compléter
+    param1->afficher();
+
     return 0;
 }
 
