@@ -48,9 +48,11 @@ void Groupe::affiche() const {
     cout << "}" << endl;
 }
 Groupe& Groupe::operator=(const Groupe& g){
-    for (auto i : g.m_effectif) {
-        Personne * temp = new Personne(i->getNom());
-        Groupe::m_effectif.push_back(temp) ;
+    if (!g.m_effectif.empty()) {
+        for (auto i : g.m_effectif) {
+            this->addPersonne(i->getNom());
+        }
     }
+    return *this;
 }
 
