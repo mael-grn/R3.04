@@ -14,11 +14,12 @@ int main(int argc, char** argv) {
     entierContraint->afficher(cout);
 
     try {
+        cout << "Le but de cet exercice est de rentrer une valeur incorrecte, afin de lever une exception : \n";
         entierContraint->saisir(cin);
-        cout << "Echec : pas d’exception levée)" << endl ;
+        cout << "Echec : pas d exception levee" << endl ;
     }
     catch (char const * erreur) {
-        cout << "Succès : exception levée : " << erreur << endl ;
+        cout << "Succes : exception levee : " << erreur << endl ;
     }
     return 0;
 }
