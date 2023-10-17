@@ -1,0 +1,75 @@
+        -:    0:Source:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/ObjetContraint.h
+        -:    0:Graph:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/cmake-build-debug-coverage/CMakeFiles/salarieTest.dir/Salarie.cpp.gcno
+        -:    0:Data:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/cmake-build-debug-coverage/CMakeFiles/salarieTest.dir/Salarie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef OBJETCONTRAINT_H
+        -:    2:#define OBJETCONTRAINT_H
+        -:    3:#include <stdexcept>
+        -:    4:
+        -:    5:template <class T>
+        -:    6:class ObjetContraint {
+        -:    7:public:
+        -:    8:    ObjetContraint(const T & val, const T & min, const T & max);
+function _ZNK14ObjetContraintIfE6getMinEv called 45 returned 100% blocks executed 100%
+       45:    9:    inline const T & getMin() const {return m_min;}
+       45:    9-block  0
+function _ZNK14ObjetContraintIfE6getMaxEv called 47 returned 100% blocks executed 100%
+       47:   10:    inline const T & getMax() const {return m_max;}
+       47:   10-block  0
+function _ZNK14ObjetContraintIfE6getValEv called 8 returned 100% blocks executed 100%
+        8:   11:    inline const T & getVal() const {return m_val;}
+        8:   11-block  0
+        -:   12:    void setVal(const T & val);
+function _ZNK14ObjetContraintIfEcvfEv called 8 returned 100% blocks executed 100%
+        8:   13:    inline operator T() const { return getVal(); }
+        8:   13-block  0
+call    0 returned 8
+        -:   14:private:  
+        -:   15:    T m_val;
+        -:   16:    T m_min;
+        -:   17:    T m_max;
+        -:   18:};
+        -:   19:
+        -:   20:// Implémentez ici les méthodes du template (pas de fichier .cpp pour un template)
+        -:   21:template <class T>
+function _ZN14ObjetContraintIfEC2ERKfS2_S2_ called 20 returned 100% blocks executed 100%
+       20:   22:ObjetContraint<T>::ObjetContraint(const T & val, const T & min, const T & max) 
+       20:   23:: m_min(min), m_max(max) {
+       20:   24:    setVal(val);
+       20:   24-block  0
+call    0 returned 20
+       20:   25:}
+        -:   26:
+        -:   27:template <class T>
+function _ZN14ObjetContraintIfE6setValERKf called 47 returned 89% blocks executed 92%
+       47:   28:void ObjetContraint<T>::setVal(const T & val) {
+       47:   29:    if (getMax()<val || val < getMin())
+       47:   29-block  0
+call    0 returned 47
+branch  1 taken 45 (fallthrough)
+branch  2 taken 2
+       45:   29-block  1
+call    3 returned 45
+branch  4 taken 3 (fallthrough)
+branch  5 taken 42
+        5:   29-block  2
+       42:   29-block  3
+       47:   29-block  4
+branch  6 taken 5 (fallthrough)
+branch  7 taken 42
+        5:   30:        throw std::domain_error("Valeur Hors Intervalle Min..Max");
+        5:   30-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   30-block  1
+call    4 returned 0
+    $$$$$:   30-block  2
+call    5 never executed
+        -:   31:    else
+       42:   32:        this->m_val=val;
+       42:   33:}
+       42:   33-block  0
+        -:   34:#endif /* OBJETCONTRAINT_H */
+        -:   35:

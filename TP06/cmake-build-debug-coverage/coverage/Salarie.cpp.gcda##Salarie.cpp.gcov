@@ -1,0 +1,534 @@
+        -:    0:Source:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/Salarie.cpp
+        -:    0:Graph:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/cmake-build-debug-coverage/CMakeFiles/salarieTest.dir/Salarie.cpp.gcno
+        -:    0:Data:/users/info/etu-2a/garnmael/R3.04/TPs/TP06/cmake-build-debug-coverage/CMakeFiles/salarieTest.dir/Salarie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Salarie.h"
+        -:    2:#include "SalarieException.h"
+        -:    3:#include <cctype>
+        -:    4:#include <map>
+        -:    5:#include <limits>
+        -:    6:#include <string>
+        -:    7:#include <iostream>
+        -:    8:#include <iomanip>
+        -:    9:using namespace std;
+        -:   10:
+        -:   11:// Constantes de classe
+        -:   12:const float        Salarie::SMIC          = 1257.0f;
+        -:   13:const float        Salarie::COEFF_SMIC    = 500.0f;
+        -:   14:const std::string  Salarie::NOM_DEF       = "Martin";
+        -:   15:const std::string  Salarie::NUMERO_SS_DEF = "1234567890123";
+        -:   16:const std::map<float, float> Salarie::TRANCHES_IMPOT {
+        -:   17:    {  6000.0f, 0.000f},
+        -:   18:    { 12000.0f, 0.055f},
+        -:   19:    { 26600.0f, 0.140f},
+        -:   20:    { 71400.0f, 0.300f},
+        -:   21:    {151200.0f, 0.410f},
+        -:   22:    {std::numeric_limits<float>::max(), 0.50f} 
+        -:   23:};
+        -:   24:
+function _ZN7SalarieC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_f called 20 returned 70% blocks executed 92%
+       20:   25:Salarie::Salarie(const std::string & nom, const std::string & numeroSS, float salaireMensuel)
+       20:   26:: m_salaireMensuel(SMIC, SMIC, SMIC*COEFF_SMIC) {
+       20:   26-block  0
+call    0 returned 20
+call    1 returned 20
+call    2 returned 20
+branch  3 taken 20 (fallthrough)
+branch  4 taken 0 (throw)
+    $$$$$:   26-block  1
+        -:   27:    // Il faut utiliser les setters pour vérifier les contraintes lors de la construction
+       20:   28:    setNom(nom);
+       20:   28-block  0
+call    0 returned 20
+branch  1 taken 16 (fallthrough)
+branch  2 taken 4 (throw)
+       16:   29:    setNumeroSS(numeroSS);
+       16:   29-block  0
+call    0 returned 16
+branch  1 taken 15 (fallthrough)
+branch  2 taken 1 (throw)
+       15:   30:    setSalaireMensuel(salaireMensuel);
+       15:   30-block  0
+call    0 returned 15
+branch  1 taken 14 (fallthrough)
+branch  2 taken 1 (throw)
+       26:   31:}
+       14:   31-block  0
+        6:   31-block  1
+call    0 returned 6
+        6:   31-block  2
+call    1 returned 6
+        -:   32:
+function _ZNK7Salarie6getNomB5cxx11Ev called 4 returned 100% blocks executed 100%
+        4:   33:const std::string & Salarie::getNom() const {
+        4:   34:    static string nomEnMajuscule;
+        4:   34-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:   34-block  1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:   34-block  2
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+        -:   35:    // nomEnMajuscule doit etre static pour pouvoir le renvoyer en résultat qui est de type "const string &"
+        -:   36:    // On ne pourrait pas renvoyer une référence à une variable locale "automatique"
+        -:   37:    //   puisque ces variables automatiques sont supprimées à la fin de la méthode
+        -:   38:    // On aurait aussi pu spécifier la méthode ainsi : std::string Salarie::getNom() const
+        -:   39:    //   et dans ce cas nomEnMajuscule n'aurait pas eu besoin d'être static
+        4:   40:    nomEnMajuscule = "";
+        4:   40-block  0
+call    0 returned 4
+       20:   41:    for (int i = 0; i < this->m_nom.size(); i++)
+       20:   41-block  0
+call    0 returned 20
+branch  1 taken 16
+branch  2 taken 4 (fallthrough)
+       16:   42:        nomEnMajuscule += (char)toupper(this->m_nom[i]);
+       16:   42-block  0
+call    0 returned 16
+call    1 returned 16
+        4:   43:    return nomEnMajuscule;
+        4:   43-block  0
+        -:   44:}
+        -:   45:
+function _ZN7Salarie6setNomERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 27 returned 70% blocks executed 83%
+       27:   46:void Salarie::setNom(const std::string & nom) {
+       27:   47:    bool erreur = false;
+      136:   48:    for (int i = 0; !erreur && i < nom.size(); i++) {
+       27:   48-block  0
+      136:   48-block  1
+branch  0 taken 132 (fallthrough)
+branch  1 taken 4
+      132:   48-block  2
+call    2 returned 132
+branch  3 taken 109 (fallthrough)
+branch  4 taken 23
+      109:   48-block  3
+       27:   48-block  4
+      136:   48-block  5
+branch  5 taken 109
+branch  6 taken 27 (fallthrough)
+      109:   49:        erreur = (!isalpha(nom[i]) && nom[i] != '-');
+      109:   49-block  0
+call    0 returned 109
+branch  1 taken 9 (fallthrough)
+branch  2 taken 100
+        9:   49-block  1
+call    3 returned 9
+branch  4 taken 4 (fallthrough)
+branch  5 taken 5
+        4:   49-block  2
+      105:   49-block  3
+      109:   49-block  4
+        -:   50:    }
+       27:   51:    if (erreur || nom.empty() || nom[0]=='-' || nom[nom.size()-1]=='-')
+       27:   51-block  0
+branch  0 taken 23 (fallthrough)
+branch  1 taken 4
+       23:   51-block  1
+call    2 returned 23
+branch  3 taken 21 (fallthrough)
+branch  4 taken 2
+       21:   51-block  2
+call    5 returned 21
+branch  6 taken 19 (fallthrough)
+branch  7 taken 2
+       19:   51-block  3
+call    8 returned 19
+call    9 returned 19
+branch 10 taken 0 (fallthrough)
+branch 11 taken 19
+        8:   51-block  4
+       19:   51-block  5
+       27:   51-block  6
+branch 12 taken 8 (fallthrough)
+branch 13 taken 19
+        8:   52:        throw NomIncorrectException();
+        8:   52-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:   52-block  1
+call    5 returned 8
+branch  6 taken 8 (fallthrough)
+branch  7 taken 0 (throw)
+        8:   52-block  2
+call    8 returned 8
+call    9 returned 8
+call   10 returned 0
+    $$$$$:   52-block  3
+call   11 never executed
+    $$$$$:   52-block  4
+call   12 never executed
+    $$$$$:   52-block  5
+    $$$$$:   52-block  6
+    $$$$$:   52-block  7
+call   13 never executed
+       19:   53:    this->m_nom = nom;
+       19:   53-block  0
+call    0 returned 19
+       19:   54:}
+        -:   55:
+function _ZNK7Salarie11getNumeroSSB5cxx11Ev called 3 returned 100% blocks executed 100%
+        3:   56:const std::string & Salarie::getNumeroSS() const {
+        3:   57:    return this->m_numeroSS;
+        3:   57-block  0
+        -:   58:}
+        -:   59:
+function _ZN7Salarie11setNumeroSSERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 26 returned 69% blocks executed 80%
+       26:   60:void Salarie::setNumeroSS(const std::string & numeroSS) {
+       26:   61:    bool erreur = false;
+      321:   62:    for (int i = 0; !erreur && i < numeroSS.size(); i++)
+       26:   62-block  0
+      321:   62-block  1
+branch  0 taken 318 (fallthrough)
+branch  1 taken 3
+      318:   62-block  2
+call    2 returned 318
+branch  3 taken 295 (fallthrough)
+branch  4 taken 23
+      295:   62-block  3
+       26:   62-block  4
+      321:   62-block  5
+branch  5 taken 295
+branch  6 taken 26 (fallthrough)
+      295:   63:        erreur = !isdigit(numeroSS[i]);
+      295:   63-block  0
+call    0 returned 295
+       26:   64:    if (numeroSS.size() != 13 || erreur || numeroSS[0] < '1' | numeroSS[0] >= '2') throw NumeroIncorrectException();
+       26:   64-block  0
+call    0 returned 26
+branch  1 taken 20 (fallthrough)
+branch  2 taken 6
+       20:   64-block  1
+branch  3 taken 18 (fallthrough)
+branch  4 taken 2
+       18:   64-block  2
+call    5 returned 18
+call    6 returned 18
+branch  7 taken 0 (fallthrough)
+branch  8 taken 18
+        8:   64-block  3
+       18:   64-block  4
+       26:   64-block  5
+branch  9 taken 8 (fallthrough)
+branch 10 taken 18
+        8:   64-block  6
+call   11 returned 8
+call   12 returned 8
+call   13 returned 8
+branch 14 taken 8 (fallthrough)
+branch 15 taken 0 (throw)
+        8:   64-block  7
+call   16 returned 8
+branch 17 taken 8 (fallthrough)
+branch 18 taken 0 (throw)
+        8:   64-block  8
+call   19 returned 8
+call   20 returned 8
+call   21 returned 0
+    $$$$$:   64-block  9
+call   22 never executed
+    $$$$$:   64-block 10
+call   23 never executed
+    $$$$$:   64-block 11
+    $$$$$:   64-block 12
+    $$$$$:   64-block 13
+call   24 never executed
+       18:   65:    this->m_numeroSS = numeroSS;
+       18:   65-block  0
+call    0 returned 18
+       18:   66:}
+        -:   67:
+function _ZNK7Salarie17getSalaireMensuelEv called 8 returned 100% blocks executed 100%
+        8:   68:float Salarie::getSalaireMensuel() const {
+        8:   69:    return this->m_salaireMensuel;
+        8:   69-block  0
+call    0 returned 8
+        -:   70:}
+        -:   71:
+function _ZN7Salarie17setSalaireMensuelEf called 27 returned 81% blocks executed 59%
+       27:   72:void Salarie::setSalaireMensuel(float salaireMensuel) {
+        -:   73:    // ObjetContraint lève une exception de type domain_error
+        -:   74:    // il faut attraper cette exception pour lever à la place
+        -:   75:    // une exception de type SalaireIncorrectException
+        -:   76:    try {
+       27:   77:        this->m_salaireMensuel.setVal(salaireMensuel);
+       27:   77-block  0
+call    0 returned 27
+branch  1 taken 22 (fallthrough)
+branch  2 taken 5 (throw)
+        5:   78:    } catch (domain_error & exception) {
+        5:   78-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 5
+        5:   78-block  1
+call    2 returned 5
+        5:   79:        throw SalaireIncorrectException();
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+branch  3 taken 5 (fallthrough)
+branch  4 taken 0 (throw)
+        5:   79-block  0
+call    5 returned 5
+branch  6 taken 5 (fallthrough)
+branch  7 taken 0 (throw)
+        5:   79-block  1
+call    8 returned 5
+call    9 returned 5
+call   10 returned 5
+    $$$$$:   79-block  2
+call   11 never executed
+    $$$$$:   79-block  3
+call   12 never executed
+    $$$$$:   79-block  4
+    $$$$$:   79-block  5
+    $$$$$:   79-block  6
+call   13 never executed
+        5:   80:    }
+        5:   80-block  0
+call    0 returned 5
+       22:   81:}
+       22:   81-block  0
+        -:   82:
+function _ZNK7Salarie8getImpotEv called 5 returned 100% blocks executed 100%
+        5:   83:float Salarie::getImpot() const {
+        5:   84:    float revenuImposable = getSalaireMensuel()*12.0f;
+        5:   84-block  0
+call    0 returned 5
+        -:   85:    float impot;
+        5:   86:    bool trancheTrouvee = false;
+        -:   87:    // On parcourt la "map" (triée sur les clés... c'est une map !)
+        -:   88:    // pour chercher la tranche d'imposition correspondant au revenu imposable
+        5:   89:    for (auto it = TRANCHES_IMPOT.begin(); 
+call    0 returned 5
+       26:   90:            it != TRANCHES_IMPOT.end() && !trancheTrouvee; it++) {
+       21:   90-block  0
+call    0 returned 21
+       26:   90-block  1
+call    1 returned 26
+call    2 returned 26
+branch  3 taken 25 (fallthrough)
+branch  4 taken 1
+       25:   90-block  2
+branch  5 taken 21 (fallthrough)
+branch  6 taken 4
+       21:   90-block  3
+        5:   90-block  4
+       26:   90-block  5
+branch  7 taken 21
+branch  8 taken 5 (fallthrough)
+        -:   91:        // it est un itérateur qui pointe sur un élément de la map
+        -:   92:        // un élément de map est une "paire" qui est une structure comportant deux champs : 
+        -:   93:        //  - first : la clé, ici le seuil de revenu pour une tranche
+        -:   94:        //  - second : la valeur associée, ici le taux d'imposition de la tranche
+       21:   95:        if (revenuImposable <= it->first) {
+       21:   95-block  0
+call    0 returned 21
+branch  1 taken 5 (fallthrough)
+branch  2 taken 16
+        5:   96:            trancheTrouvee = true;
+        5:   97:            impot = revenuImposable * it->second;
+        5:   97-block  0
+call    0 returned 5
+        -:   98:        }
+        -:   99:    }
+        5:  100:    return impot;
+        5:  100-block  0
+        -:  101:}
+        -:  102:
+function _ZN7Salarie6saisirEv called 0 returned 0% blocks executed 0%
+    #####:  103:void Salarie::saisir() {
+        -:  104:    // On utilise ici les "setters" en gérant les exceptions qu'ils lèvent
+        -:  105:    //  pour recommencer les saisies tant que les valeurs sont incorrectes
+        -:  106:    bool erreurSaisie;
+        -:  107:    // Saisie du nom
+    #####:  108:    do {
+    %%%%%:  108-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  109:        try {
+    #####:  110:            cout << "Nom : ";
+    %%%%%:  110-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  111:            string nom;
+    %%%%%:  111-block  0
+call    0 never executed
+    #####:  112:            getline(cin, nom); // cin >> nom : ne lit que le 1er mot
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  113:            this->setNom(nom);
+    %%%%%:  113-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  114:            erreurSaisie = false;
+    #####:  115:        } catch (NomIncorrectException & exception) {
+    %%%%%:  115-block  0
+call    0 never executed
+    $$$$$:  115-block  1
+call    1 never executed
+    $$$$$:  115-block  2
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  115-block  3
+call    4 never executed
+    =====:  116:            cout << "Nom incorrect, recommencez..." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  116-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  117:            erreurSaisie = true;
+    =====:  118:        }
+    $$$$$:  118-block  0
+call    0 never executed
+    $$$$$:  118-block  1
+call    1 never executed
+        -:  119:    } while (erreurSaisie);
+        -:  120:    // Saisie du Numéro SS
+    #####:  121:    do {
+    %%%%%:  121-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  122:        try {
+    #####:  123:            cout << "Numéro SS : ";
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  124:            string numeroSS;
+    %%%%%:  124-block  0
+call    0 never executed
+    #####:  125:            getline(cin, numeroSS);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  126:            this->setNumeroSS(numeroSS);
+    %%%%%:  126-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  127:            erreurSaisie = false;
+    #####:  128:        } catch (NumeroIncorrectException & exception) {
+    %%%%%:  128-block  0
+call    0 never executed
+    $$$$$:  128-block  1
+call    1 never executed
+    $$$$$:  128-block  2
+branch  2 never executed
+branch  3 never executed
+    $$$$$:  128-block  3
+call    4 never executed
+    =====:  129:            cout << "Numéro SS incorrect, recommencez..." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  129-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  130:            erreurSaisie = true;
+    =====:  131:        }
+    $$$$$:  131-block  0
+call    0 never executed
+    $$$$$:  131-block  1
+call    1 never executed
+        -:  132:    } while (erreurSaisie);
+        -:  133:    // Saisie du salaire
+    #####:  134:    do {
+    %%%%%:  134-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  135:        try {
+    #####:  136:            cout << "Salaire Mensuel : ";
+    %%%%%:  136-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  137:            float salaire;
+    #####:  138:            cin >> salaire; cin.ignore(256,'\n');
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  138-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  139:            this->setSalaireMensuel(salaire);
+    %%%%%:  139-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  140:            erreurSaisie = false;
+    %%%%%:  140-block  0
+    =====:  141:        } catch (SalaireIncorrectException & exception) {
+    $$$$$:  141-block  0
+branch  0 never executed
+branch  1 never executed
+    $$$$$:  141-block  1
+call    2 never executed
+    =====:  142:            cout << "Salaire Mensuel incorrect, recommencez..." << endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  142-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    =====:  143:            erreurSaisie = true;
+    =====:  144:        }
+    $$$$$:  144-block  0
+call    0 never executed
+    $$$$$:  144-block  1
+call    1 never executed
+        -:  145:    } while (erreurSaisie);
+    #####:  146:}
+    %%%%%:  146-block  0
+        -:  147:
+function _ZNK7Salarie8afficherEv called 0 returned 0% blocks executed 0%
+    #####:  148:void Salarie::afficher() const {
+    #####:  149:    cout << "            Nom : " << this->getNom() << endl
+    %%%%%:  149-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:  150:         << "      Numéro SS : " << this->getNumeroSS() << endl
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    #####:  151:         << fixed << setprecision(2) // pour écrire les nombres avec 2 chiffres après la virgule
+call    0 never executed
+    #####:  152:         << "Salaire Mensuel : " << setw(10) << this->getSalaireMensuel() << " €" << endl
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+call    7 never executed
+call    8 never executed
+    #####:  153:         << "   Impôt Annuel : " << setw(10) << this->getImpot() << " €" << endl;
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+call    5 never executed
+call    6 never executed
+    #####:  154:}

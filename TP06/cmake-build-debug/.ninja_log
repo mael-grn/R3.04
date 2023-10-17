@@ -1,10 +1,8 @@
 # ninja log v5
-3	557	1697530298460437046	CMakeFiles/salarieTest.dir/Salarie.cpp.o	2596fa9abe476fc
-4	918	1697530298792440627	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	b5de8b2c4ef7b20b
-3	986	1697530298892441705	CMakeFiles/salarieTest.dir/salarieTest.cpp.o	b572d8ba01f5f09a
-4	4389	1697530302276478225	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	3864b9bdd90e911
+983	1141	1697535363676588553	salarieTest	c643fe55e00243c4
+1	485	1697531898855331258	CMakeFiles/salarieTest.dir/Salarie.cpp.o	2596fa9abe476fc
 4390	5366	1697530303232488547	lib/libgtest.a	3ad16cfc5eb828f7
+1	982	1697535363516586830	CMakeFiles/salarieTest.dir/salarieTest.cpp.o	b572d8ba01f5f09a
+4	4389	1697530302276478225	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	3864b9bdd90e911
 5366	5475	1697530303376490102	lib/libgtest_main.a	18d62193d73acd2d
-5475	5639	1697530303540491873	salarieTest	c643fe55e00243c4
-1	486	1697530340840896616	CMakeFiles/salarieTest.dir/Salarie.cpp.o	2596fa9abe476fc
-488	655	1697530341036898753	salarieTest	c643fe55e00243c4
+4	918	1697530298792440627	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	b5de8b2c4ef7b20b
