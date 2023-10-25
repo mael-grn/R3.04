@@ -17,7 +17,7 @@ public:
     void saisir(std::istream & entree = std::cin);
     void afficher(std::ostream & sortie = std::cout) const;
 
-    // A CCOMPLETER : Rajouter l'opérateur < pour le TP02 exercice 3
+    bool operator < (const Point &p) const;
 
 private: // membres privés
     // attributs d'instance

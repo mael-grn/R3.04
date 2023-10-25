@@ -4,7 +4,8 @@
 using namespace std;
 
 
-// A COMPLETER : implémenter l'opérateur <
+bool Point::operator<(const Point &p) const {if (p.getX() > this->getX() & p.getY() > this->getY()){return true;}else{ return false;}}
+
 
 // Constantes de classe
 const std::string Point::NOM_DEF = "ORIGINE";
