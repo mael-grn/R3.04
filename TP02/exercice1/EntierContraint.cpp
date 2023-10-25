@@ -40,6 +40,10 @@ void EntierContraint::afficher(ostream& sortie) const {
 
 
 }
+
+    EntierContraint &EntierContraint::operator=(int val) {this->setVal(val); return *this;}
+
+
     EntierContraint::operator int() const {return EntierContraint::getVal();}
     ostream & operator << (std::ostream & sortie, const EntierContraint & ec) {return sortie << ec.getVal() << "(" << ec.getMin() << ", " << ec.getMax() << ") ";}
     istream & operator >> (std::istream & entree, EntierContraint & ec) {int val; entree >> val; ec.setVal(val); return entree;}
